@@ -98,8 +98,9 @@ public class JournalCreationPage {
 		enterAmount.sendKeys("5000");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", saveButton);
-		Point coForButton = GetCoordinates.getCoordinatesWithinElement(saveButton, 0.1, 0.1);
-		actions.moveToElement(saveButton, coForButton.getX(), coForButton.getY()).click().build().perform();
+//		Point coForButton = GetCoordinates.getCoordinatesWithinElement(saveButton, 0.1, 0.1);
+		GetCoordinates.getCoordinatesWithinElement(saveButton, 0.1, 0.1);
+//		actions.moveToElement(saveButton, coForButton.getX(), coForButton.getY()).click().build().perform();
 		Thread.sleep(5000);
 		
 	}

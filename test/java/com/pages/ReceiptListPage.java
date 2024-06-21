@@ -17,6 +17,15 @@ public class ReceiptListPage {
 	@FindBy(xpath = "//a[@aria-label = 'Last']")
 	public WebElement lastPage;
 	
+	@FindBy(css = "[data-mat-calendar='mat-datepicker-0']")
+    public WebElement fromDateInput;
+	
+	@FindBy(xpath = "//mat-datepicker-toggle[@data-mat-calendar='mat-datepicker-1']")
+    public WebElement toDateInput;
+	
+	@FindBy(xpath = "//div[contains(text(), '8')]")
+	public WebElement fromdDateInputValue;
+	
 	public ReceiptListPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
